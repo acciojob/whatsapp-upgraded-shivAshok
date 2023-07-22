@@ -13,7 +13,7 @@ public class WhatsAppRepo {
     Map<String,Integer> userWithMsg=new HashMap<>();
     Map<String,List<Message>> groupWithMsg=new HashMap<>();
     Map<Integer,Message> Messeges=new HashMap<>();
-    static int msgCnt;
+
     public Optional<User> findUserBYNumber(String number){
         if(users.containsKey(number)) {
            return Optional.of(users.get(number));
@@ -47,8 +47,8 @@ public class WhatsAppRepo {
 
     public int createMessage(String content) {
         Message msg=new Message();
-        msgCnt++;
-        msg.setId(msgCnt);
+
+        msg.setId(Messeges.size()+1);
         msg.setContent(content);
         Messeges.put(msg.getId(),msg);
         return msg.getId();
