@@ -9,7 +9,7 @@ import java.util.Optional;
 @Service
 public class WhatsappService {
     @Autowired
-    WhatsAppRepo whatsAppRepo;
+    WhatsAppRepo whatsAppRepo=new WhatsAppRepo();
     public String createUser(String name, String mobile) {
         Optional<User> user=whatsAppRepo.findUserBYNumber(mobile);
         if(user.isPresent()){
