@@ -86,6 +86,9 @@ public class WhatsappService {
                 }
             }
             if(isFound){
+                if(user.isAdmin()){
+                    throw new RuntimeException("Cannot remove admin");
+                }
                 usersGpName=gpName;
                 whatsAppRepo.DeleteFromGroup(gpName,user);
                 break;

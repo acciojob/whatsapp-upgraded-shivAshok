@@ -4,8 +4,17 @@ public class User {
 
     private String name;
     private String mobile;
+    private boolean isAdmin;
 
-    public User(String name,String mobile) {
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
+    }
+
+    public User(String name, String mobile) {
         this.name = name;
         this.mobile=mobile;
     }

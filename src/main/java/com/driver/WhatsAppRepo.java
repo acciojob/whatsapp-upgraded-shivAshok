@@ -32,6 +32,7 @@ public class WhatsAppRepo {
         Group gp=new Group();
         List<User> usrs=users;
         User user=users.get(0);
+        user.setAdmin(true);
         gp.setGroupAdmin(user.getName());
         gp.setNumberOfParticipants(users.size());
         String groupName="";
