@@ -13,7 +13,9 @@ public class Message {
         this.content = content;
         this.timestamp =new Date();
     }
-
+public Message(String content){
+        this.content=content;
+}
     public Message() {
         this.timestamp =new Date();
     }
